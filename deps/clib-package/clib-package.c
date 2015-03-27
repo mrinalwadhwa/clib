@@ -444,7 +444,7 @@ char *
 clib_package_url(const char *author, const char *name, const char *version) {
   if (!author || !name || !version) return NULL;
   int size =
-      34 // https://raw.githubusercontent.com/
+      33 // http://raw.githubusercontent.com/
     + strlen(author)
     + 1 // /
     + strlen(name)
@@ -457,7 +457,7 @@ clib_package_url(const char *author, const char *name, const char *version) {
   if (slug) {
     memset(slug, '\0', size);
     sprintf(slug
-      , "https://raw.githubusercontent.com/%s/%s/%s"
+      , "http://raw.githubusercontent.com/%s/%s/%s"
       , author
       , name
       , version);
